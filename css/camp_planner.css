@@ -1,0 +1,84 @@
+table.campPlanner {
+	margin: 10px 0px;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 90%;
+	background-color: #252726;
+	border: 1px #222 solid;
+}
+
+table.campPlanner tbody, table.campPlanner thead {
+	border: 1px solid #101010;
+	border-left: 0px;
+	border-right: 0px;
+	background-color: #252726;
+	height: 100%;
+}
+table.campPlanner thead:first-child, table.campPlanner tbody:first-child { border-top: 0px; }
+table.campPlanner tbody:last-child { border-bottom: 0px; }
+
+table.campPlanner.edit td { border: 1px solid #101010; }
+table.campPlanner.edit th.trash { background-color: red; }
+
+
+table.campPlanner th {
+	background-color: #101010;
+	white-space: nowrap;
+}
+
+table.campPlanner td, table.campPlanner th {
+	padding: 0.25ex 0.5em 0.25ex 0.5em;
+	height: 100%;
+}
+table.campPlanner td.border { border: 1px solid #252726; }
+
+table.campPlanner td.singleedit {
+	text-align: left;
+	white-space: nowrap;
+}
+
+table.campPlanner td span.garant {
+	font-size: 80%;
+	color: #444444;
+}
+
+table.campPlanner div.event {
+	position: relative;
+	min-height: 8px;
+	margin: 1px auto;
+	border: 2px gray solid;
+	border-radius: 4px;
+	background-color: white;
+	box-shadow: 0px 0px 3px #777777;
+	color: black;
+}
+table.campPlanner div.event.clone span {
+	display: none;
+}
+
+/*Keep hierarchy of these lines, later ones overwrites previous*/
+table.campPlanner div.event.game.inside { border-color: green; }
+table.campPlanner div.event.game.outside { border-color: red; }
+table.campPlanner div.event.lecture, table.campPlanner div.event.other { border-color: blue; }
+table.campPlanner div.event.preparation, table.campPlanner div.event.cleanup {
+	opacity: 0.5;
+	background: repeating-linear-gradient(
+		45deg,
+		white, white 10px,
+		#aaaaaa 10px, #aaaaaa 20px
+	);
+}
+
+table.campPlanner div.event.hide {
+	opacity: 0.1;
+}
+
+table.campPlanner div.event a {
+	color: #2E4D70;
+	font-weight: bold;
+}
+
+/*Keep hierarchy of these lines, later ones overwrites previous*/
+table.campPlanner td.hasPreparation { background-color: #444444; }
+table.campPlanner td.hasCleanup { background-color: #444444; }
+table.campPlanner td.hasPrimary { background-color: red; }
